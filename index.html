@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1><strong>Welcome to My Portfolio</strong></h1>
+    <button id="themeToggle"><strong>Toggle Dark Mode</strong></button>
+</header>
+
+<section id="about">
+    <h2><strong>About Me</strong></h2>
+    <p><strong>Hi, I'm a student learning web development. This is my portfolio to showcase my assignments and skills.</strong></p>
+</section>
+
+<section id="projects">
+    <h2><strong>Projects</strong></h2>
+    <ul id="projectList">
+        <!-- Projects will be added dynamically using JavaScript -->
+    </ul>
+</section>
+
+<section id="skills">
+    <h2><strong>Skills</strong></h2>
+    <ul id="skillList">
+        <!-- Skills will be added dynamically using JavaScript -->
+    </ul>
+</section>
+
+<section id="contact">
+    <h2><strong>Contact Me</strong></h2>
+    <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+        <button type="submit"><strong>Send</strong></button>
+    </form>
+    <p id="formMessage"></p>
+</section>
+
+<footer>
+    <p>&copy; 2023 My Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
