@@ -5,7 +5,10 @@ const projects = [
     "Random Quote Generator",
     "To-Do List App",
     "Calculator",
-    "Portfolio Website"
+    "Portfolio Website",
+    "CyberGuardians App",
+    "MHSLEARN Website",
+    "PKOP Website"
 ];
 
 const projectList = document.getElementById("projectList");
@@ -20,7 +23,11 @@ const skills = [
     "HTML",
     "CSS",
     "JavaScript",
-    "Responsive Design"
+    "Responsive Design",
+    "C#",
+    ".NET 8.0",
+    "SQL Server",
+    "Figma"
 ];
 
 const skillsList = document.getElementById("skillList");
