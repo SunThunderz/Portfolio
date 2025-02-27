@@ -1,20 +1,41 @@
-// script.js
-
 // Add Projects Dynamically
+// Add Projects Dynamically with "Read More" Button
 const projects = [
-    "Random Quote Generator",
-    "To-Do List App",
-    "Calculator",
-    "Portfolio Website",
-    "CyberGuardians App",
-    "MHSLEARN Website",
-    "PKOP Website"
+    { name: "Brent Faiyaz Random Quote Generator", description: "Generates 8 random quotes by Brent Faiyaz." },
+    { name: "To-Do List App", description: "A simple task management application." },
+    { name: "Calculator", description: "A basic calculator with arithmetic functions." },
+    { name: "Portfolio Website", description: "A personal portfolio showcasing projects and skills." },
+    { name: "MHSLEARN Website", description: "MHSLEARN is an E- Learning System with Functional Literacy Test and Automatic Recognition Technology for Manila High School." },
+    { name: "PKOP Website", description: "Paramount Key Operational Procedures is a web-based system designed to facilitate the onboarding process for new employees. It serves as a centralized platform that guides them through company policies, job responsibilities, and essential tools used within the organization. The system provides instructional materials and interactive resources to help employees understand how to access, use, and manage these tools effectively. Additionally, it offers FAQs where new hires can seek clarification regarding company policies, their roles, and workplace tools, ensuring a seamless transition into their positions. " }
 ];
 
 const projectList = document.getElementById("projectList");
+
 projects.forEach(project => {
     const li = document.createElement("li");
-    li.textContent = project;
+    li.textContent = project.name;
+
+    // Create "Read More" button
+    const readMoreBtn = document.createElement("button");
+    readMoreBtn.textContent = "Read More";
+    readMoreBtn.style.marginLeft = "10px";
+    readMoreBtn.style.cursor = "pointer";
+
+    // Create a description element (initially hidden)
+    const description = document.createElement("p");
+    description.textContent = project.description;
+    description.style.display = "none"; // Hide description initially
+    description.style.marginTop = "5px";
+
+    // Toggle description on button click
+    readMoreBtn.addEventListener("click", () => {
+        description.style.display = description.style.display === "none" ? "block" : "none";
+        readMoreBtn.textContent = description.style.display === "none" ? "Read More" : "Show Less";
+    });
+
+    // Append elements to the list item
+    li.appendChild(readMoreBtn);
+    li.appendChild(description);
     projectList.appendChild(li);
 });
 
