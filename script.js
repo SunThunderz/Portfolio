@@ -1,4 +1,3 @@
-// Add Projects Dynamically
 // Add Projects Dynamically with "Read More" Button
 const projects = [
     { name: "Brent Faiyaz Random Quote Generator", description: "Generates 8 random quotes by Brent Faiyaz." },
@@ -83,7 +82,22 @@ contactForm.addEventListener("submit", (e) => {
         formMessage.textContent = "Please fill out all fields.";
         formMessage.style.color = "red";
     }
-    
 });
+
+// Function to update footer with current date
+function updateFooterDate() {
+    const footer = document.querySelector("footer p");
+    const currentDate = new Date();
+
+    // Get month, day, and year
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+    // Update footer text
+    footer.innerHTML = `&copy; ${formattedDate} | Mariah Carmella Santander's Portfolio | All Rights Reserved`;
+}
+
+// Call the function on page load
+document.addEventListener("DOMContentLoaded", updateFooterDate);
    
 
