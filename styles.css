@@ -18,13 +18,29 @@ header h1 {
     margin: 0;
 }
 
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #ffd000;
+    margin-right: 20px;
+}
+
 #themeToggle {
-    background-color: #fff;
-    color: #007bff;
-    border: none;
     padding: 10px 20px;
+    background-color: #000000; /* Change button color to black */
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+#themeToggle:hover {
+    background-color: #333333; /* Darker shade of black on hover */
 }
 
 section {
@@ -43,6 +59,7 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
 ul li {
     background-color: #f4f4f4;
     margin: 5px 0;
@@ -67,12 +84,12 @@ form input, form textarea {
 }
 
 form button {
-    margin-top: 10px;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
+    
     cursor: pointer;
 }
 
@@ -93,6 +110,7 @@ body.dark-mode {
     background-color: #333;
     color: #f4f4f4;
 }
+
 body.dark-mode header {
     background-color: #222;
 }
@@ -104,5 +122,58 @@ body.dark-mode section {
 
 body.dark-mode ul li {
     background-color: #555;
+}
+
+body.dark-mode form input, body.dark-mode form textarea {
+    background-color: #555;
+    color: #f4f4f4;
+    border: 1px solid #777;
+}
+
+body.dark-mode form button {
+    background-color: #007bff;
+    color: #f4f4f4;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+/* Style for the LinkedIn button */
+.social-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #0077b5; /* LinkedIn blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+social-button:hover {
+    background-color: #005582; /* Darker shade of LinkedIn blue */
+}
+
+/* Style for the About Me section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
 }
 

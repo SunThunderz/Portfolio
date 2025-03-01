@@ -1,11 +1,11 @@
-// Add Projects Dynamically with "Read More" Button
+// Projects with "Read More" and "Visit Project" Buttons
 const projects = [
-    { name: "Brent Faiyaz Random Quote Generator", description: "Generates 8 random quotes by Brent Faiyaz." },
-    { name: "To-Do List App", description: "A simple task management application." },
-    { name: "Calculator", description: "A basic calculator with arithmetic functions." },
-    { name: "Portfolio Website", description: "A personal portfolio showcasing projects and skills." },
-    { name: "MHSLEARN Website", description: "MHSLEARN is an E- Learning System with Functional Literacy Test and Automatic Recognition Technology for Manila High School." },
-    { name: "PKOP Website", description: "Paramount Key Operational Procedures is a web-based system designed to facilitate the onboarding process for new employees. It serves as a centralized platform that guides them through company policies, job responsibilities, and essential tools used within the organization. The system provides instructional materials and interactive resources to help employees understand how to access, use, and manage these tools effectively. Additionally, it offers FAQs where new hires can seek clarification regarding company policies, their roles, and workplace tools, ensuring a seamless transition into their positions. " }
+    { name: "Brent Faiyaz Random Quote Generator", description: "Generates 8 random quotes by Brent Faiyaz.", link: "brent-quote.html" },
+    { name: "To-Do List App", description: "A simple task management application.", link: "#" },
+    { name: "Calculator", description: "A basic calculator with arithmetic functions.", link: "#" },
+    { name: "Portfolio Website", description: "A personal portfolio showcasing projects and skills.", link: "#" },
+    { name: "MHSLEARN Website", description: "MHSLEARN is an E-Learning System for Manila High School.", link: "#" },
+    { name: "PKOP Website", description: "A web-based system to facilitate onboarding for new employees.", link: "#" }
 ];
 
 const projectList = document.getElementById("projectList");
@@ -14,41 +14,48 @@ projects.forEach(project => {
     const li = document.createElement("li");
     li.textContent = project.name;
 
-    // Create "Read More" button
+    // "Read More" button
     const readMoreBtn = document.createElement("button");
     readMoreBtn.textContent = "Read More";
     readMoreBtn.style.marginLeft = "10px";
     readMoreBtn.style.cursor = "pointer";
 
-    // Create a description element (initially hidden)
+    // Description
     const description = document.createElement("p");
     description.textContent = project.description;
-    description.style.display = "none"; // Hide description initially
+    description.style.display = "none";
     description.style.marginTop = "5px";
 
-    // Toggle description on button click
+    // "Visit Project" button
+    const visitBtn = document.createElement("a");
+    visitBtn.textContent = "Visit Project";
+    visitBtn.href = project.link;
+    visitBtn.target = "_blank";
+    visitBtn.style.display = "none";
+    visitBtn.style.marginLeft = "10px";
+    visitBtn.style.textDecoration = "none";
+    visitBtn.style.color = "white";
+    visitBtn.style.backgroundColor = "#007bff";
+    visitBtn.style.padding = "5px 10px";
+    visitBtn.style.borderRadius = "5px";
+
+    // Toggle description and button visibility
     readMoreBtn.addEventListener("click", () => {
-        description.style.display = description.style.display === "none" ? "block" : "none";
-        readMoreBtn.textContent = description.style.display === "none" ? "Read More" : "Show Less";
+        const isHidden = description.style.display === "none";
+        description.style.display = isHidden ? "block" : "none";
+        visitBtn.style.display = isHidden ? "inline-block" : "none";
+        readMoreBtn.textContent = isHidden ? "Show Less" : "Read More";
     });
 
     // Append elements to the list item
     li.appendChild(readMoreBtn);
     li.appendChild(description);
+    li.appendChild(visitBtn);
     projectList.appendChild(li);
 });
 
-// Add Skills Dynamically
-const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Responsive Design",
-    "C#",
-    ".NET 8.0",
-    "SQL Server",
-    "Figma"
-];
+// Skills
+const skills = ["HTML", "CSS", "JavaScript", "Responsive Design", "C#", ".NET 8.0", "SQL Server", "Figma"];
 
 const skillsList = document.getElementById("skillList");
 skills.forEach(skill => {
@@ -58,46 +65,18 @@ skills.forEach(skill => {
 });
 
 // Toggle Dark Mode
-const themeToggle = document.getElementById("themeToggle");
-themeToggle.addEventListener("click", () => {
+document.getElementById("themeToggle").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 });
 
-// Contact Form Validation
-const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
-
-contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    if (name && email && message) {
-        formMessage.textContent = "Thank you for your message!";
-        formMessage.style.color = "green";
-        contactForm.reset();
-    } else {
-        formMessage.textContent = "Please fill out all fields.";
-        formMessage.style.color = "red";
-    }
-});
-
-// Function to update footer with current date
-function updateFooterDate() {
-    const footer = document.querySelector("footer p");
-    const currentDate = new Date();
-
-    // Get month, day, and year
+// Function to update date
+function updateDate() {
+    const dateElement = document.getElementById("currentDate");
+    const now = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const formattedDate = currentDate.toLocaleDateString('en-US', options);
-
-    // Update footer text
-    footer.innerHTML = `&copy; ${formattedDate} | Mariah Carmella Santander's Portfolio | All Rights Reserved`;
+    const formattedDate = now.toLocaleDateString(undefined, options);
+    dateElement.textContent = formattedDate;
 }
 
-// Call the function on page load
-document.addEventListener("DOMContentLoaded", updateFooterDate);
-   
-
+// Update date on page load
+updateDate();
