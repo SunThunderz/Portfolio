@@ -1,9 +1,9 @@
-// Projects with "Read More" and "Visit Project" Buttons
+// Projects
 const projects = [
     { name: "Brent Faiyaz Random Quote Generator", description: "Generates 8 random quotes by Brent Faiyaz.", link: "brent-quote.html" },
     { name: "To-Do List App", description: "A simple task management application.", link: "#" },
     { name: "Calculator", description: "A basic calculator with arithmetic functions.", link: "#" },
-    { name: "Portfolio Website", description: "A personal portfolio showcasing projects and skills.", link: "#" },
+    { name: "Portfolio Website", description: "A personal portfolio showcasing projects and skills.", link: "index.html" },
     { name: "MHSLEARN Website", description: "MHSLEARN is an E-Learning System for Manila High School.", link: "#" },
     { name: "PKOP Website", description: "A web-based system to facilitate onboarding for new employees.", link: "#" }
 ];
@@ -19,6 +19,12 @@ projects.forEach(project => {
     readMoreBtn.textContent = "Read More";
     readMoreBtn.style.marginLeft = "10px";
     readMoreBtn.style.cursor = "pointer";
+    readMoreBtn.style.textDecoration = "none";
+    readMoreBtn.style.color = "white";
+    readMoreBtn.style.backgroundColor = "#33a83c";
+    readMoreBtn.style.padding = "5px 10px";
+    readMoreBtn.style.borderRadius = "5px";
+    readMoreBtn.style.border = "none";
 
     // Description
     const description = document.createElement("p");
@@ -38,6 +44,17 @@ projects.forEach(project => {
     visitBtn.style.backgroundColor = "#007bff";
     visitBtn.style.padding = "5px 10px";
     visitBtn.style.borderRadius = "5px";
+    visitBtn.style.border = "none";
+
+    // Handle "Visit Project" button click
+    visitBtn.addEventListener("click", (event) => {
+        if (project.link === "#") {
+            event.preventDefault();
+            alert("Currently in progress! Stay tuned!");
+        } else {
+            window.open(project.link, "_blank");
+        }
+    });
 
     // Toggle description and button visibility
     readMoreBtn.addEventListener("click", () => {
@@ -45,9 +62,9 @@ projects.forEach(project => {
         description.style.display = isHidden ? "block" : "none";
         visitBtn.style.display = isHidden ? "inline-block" : "none";
         readMoreBtn.textContent = isHidden ? "Show Less" : "Read More";
+        readMoreBtn.style.backgroundColor = isHidden ? "red" : "#33a83c";
     });
 
-    // Append elements to the list item
     li.appendChild(readMoreBtn);
     li.appendChild(description);
     li.appendChild(visitBtn);
@@ -55,7 +72,7 @@ projects.forEach(project => {
 });
 
 // Skills
-const skills = ["HTML", "CSS", "JavaScript", "Responsive Design", "C#", ".NET 8.0", "SQL Server", "Figma"];
+const skills = ["HTML", "CSS", "JavaScript", "Responsive Design", "C#", ".NET 8.0", "SQL Server", "Figma", "Canva", "Capcut", "Midjourney"];
 
 const skillsList = document.getElementById("skillList");
 skills.forEach(skill => {
@@ -65,11 +82,38 @@ skills.forEach(skill => {
 });
 
 // Toggle Dark Mode
-document.getElementById("themeToggle").addEventListener("click", () => {
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "Toggle Light Mode";
+    } else {
+        themeToggle.textContent = "Toggle Dark Mode";
+    }
+    themeToggle.style.fontWeight = "bold";
 });
 
-// Function to update date
+// Contact Form Validation
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (name && email && message) {
+        formMessage.textContent = "Thank you for your message!";
+        formMessage.style.color = "green";
+        contactForm.reset();
+    } else {
+        formMessage.textContent = "Please fill out all fields.";
+        formMessage.style.color = "red";
+    }
+});
+
+// Update current date
 function updateDate() {
     const dateElement = document.getElementById("currentDate");
     const now = new Date();
@@ -77,6 +121,5 @@ function updateDate() {
     const formattedDate = now.toLocaleDateString(undefined, options);
     dateElement.textContent = formattedDate;
 }
-
-// Update date on page load
 updateDate();
+
