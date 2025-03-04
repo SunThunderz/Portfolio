@@ -122,4 +122,3 @@ function updateDate() {
     dateElement.textContent = formattedDate;
 }
 updateDate();
-
