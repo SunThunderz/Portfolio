@@ -4,7 +4,7 @@
 This is a personal portfolio website for Mariah Carmella P. Santander, a 5th-year BS IT student learning web development. The portfolio showcases various projects, skills, and contact information. The website includes a dark mode toggle feature and a contact form for visitors to send messages.
 
 ## Features
-- **Projects Section**: Displays a list of projects with "Read More" and "Visit Project" buttons, and   Projects Gallery.
+- **Projects Section**: Displays a list of projects with "Read More" and "Visit Project" buttons.
 - **Skills Section**: Lists the skills acquired.
 - **Contact Form**: Allows visitors to send messages.
 - **Dark Mode Toggle**: Switches between light and dark themes.
