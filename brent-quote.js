@@ -1,3 +1,4 @@
+// Array of quotes with corresponding images
 const quotesWithImages = [
     {
         quote: "You can't have flowers without rain. - Brent Faiyaz",
@@ -36,6 +37,7 @@ const quotesWithImages = [
 const quoteDisplay = document.getElementById("quoteDisplay");
 const quoteButton = document.getElementById("new-quote");
 
+// Event listener to the button to generate a new quote when clicked
 quoteButton.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * quotesWithImages.length);
     const selectedQuote = quotesWithImages[randomIndex];

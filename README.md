@@ -9,6 +9,7 @@ This is a personal portfolio website for Mariah Carmella P. Santander, a 5th-yea
 - **Contact Form**: Allows visitors to send messages.
 - **Dark Mode Toggle**: Switches between light and dark themes.
 - **Dynamic Date**: Displays the current date in the footer.
+- **Projects Gallery**: A slideshow showcasing the projects created.
 
 ## Instructions to Run the Project
 

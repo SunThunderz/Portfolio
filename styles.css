@@ -72,11 +72,11 @@ ul li {
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
-    font-weight: bold; /* Make project list text bold */
+    font-weight: bold;
 }
 
 ul li p {
-    font-weight: normal; /* Ensure description text is not bold */
+    font-weight: normal;
 }
 
 /* Read More Button Styles */
@@ -115,7 +115,7 @@ ul li p {
 }
 
 .read-more-btn.open::after {
-    transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+    transform: translateY(-50%) rotate(180deg);
 }
 
 /* Visit Project Button Styles */
@@ -128,7 +128,7 @@ ul li p {
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
-    font-weight: normal; /* Ensure visit button text is not bold */
+    font-weight: normal;
 }
 
 .visitBtn:hover {
