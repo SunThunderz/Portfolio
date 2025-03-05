@@ -4,8 +4,8 @@ const projects = [
     { name: "To-Do List App", description: "A simple task management application.", link: "#" },
     { name: "Calculator", description: "A basic calculator with arithmetic functions.", link: "#" },
     { name: "Portfolio Website", description: "A personal portfolio showcasing projects and skills.", link: "index.html" },
-    { name: "MHSLEARN Website", description: "MHSLEARN is an E-Learning System for Manila High School.", link: "#" },
-    { name: "PKOP Website", description: "A web-based system to facilitate onboarding for new employees.", link: "#" }
+    { name: "MHSLEARN E-learning Website", description: "An e-learning system for Manila High School designed to support remote learning for both students and teachers, featuring access to learning materials, user profiles, dashboards, and assessment tools. It enhances the Functional Literacy Test (FLT) to better assess students’ readiness for different levels in the Alternative Learning System (ALS) by providing classification and immediate feedback on their appropriate level. Additionally, it provides reading and comprehension assessments using Automatic Speech Recognition (Speech-to-Text) technology, allowing students to practice reading and receive instant feedback to improve their comprehension skills.", link: "#" },
+    { name: "PKOP Website", description: "A web-based system designed to facilitate the onboarding process for new employees. It serves as a centralized platform that guides them through company policies, job responsibilities, and essential tools used within the organization. The system provides instructional materials and interactive resources to help employees understand how to access, use, and manage these tools effectively. Additionally, it offers FAQs where new hires can seek clarification regarding company policies, their roles, and workplace tools, ensuring a seamless transition into their positions. ", link: "#" }
 ];
 
 const projectList = document.getElementById("projectList");
@@ -17,14 +17,7 @@ projects.forEach(project => {
     // "Read More" button
     const readMoreBtn = document.createElement("button");
     readMoreBtn.textContent = "Read More";
-    readMoreBtn.style.marginLeft = "10px";
-    readMoreBtn.style.cursor = "pointer";
-    readMoreBtn.style.textDecoration = "none";
-    readMoreBtn.style.color = "white";
-    readMoreBtn.style.backgroundColor = "#33a83c";
-    readMoreBtn.style.padding = "5px 10px";
-    readMoreBtn.style.borderRadius = "5px";
-    readMoreBtn.style.border = "none";
+    readMoreBtn.className = "read-more-btn";
 
     // Description
     const description = document.createElement("p");
@@ -37,14 +30,7 @@ projects.forEach(project => {
     visitBtn.textContent = "Visit Project";
     visitBtn.href = project.link;
     visitBtn.target = "_blank";
-    visitBtn.style.display = "none";
-    visitBtn.style.marginLeft = "10px";
-    visitBtn.style.textDecoration = "none";
-    visitBtn.style.color = "white";
-    visitBtn.style.backgroundColor = "#007bff";
-    visitBtn.style.padding = "5px 10px";
-    visitBtn.style.borderRadius = "5px";
-    visitBtn.style.border = "none";
+    visitBtn.className = "visitBtn";
 
     // Handle "Visit Project" button click
     visitBtn.addEventListener("click", (event) => {
@@ -62,7 +48,7 @@ projects.forEach(project => {
         description.style.display = isHidden ? "block" : "none";
         visitBtn.style.display = isHidden ? "inline-block" : "none";
         readMoreBtn.textContent = isHidden ? "Show Less" : "Read More";
-        readMoreBtn.style.backgroundColor = isHidden ? "red" : "#33a83c";
+        readMoreBtn.classList.toggle("open", isHidden);
     });
 
     li.appendChild(readMoreBtn);
@@ -72,7 +58,7 @@ projects.forEach(project => {
 });
 
 // Skills
-const skills = ["HTML", "CSS", "JavaScript", "Responsive Design", "C#", ".NET 8.0", "SQL Server", "Figma", "Canva", "Capcut", "Midjourney"];
+const skills = ["HTML", "CSS", "JavaScript", "C#", ".NET 8.0", "SQL Server", "Figma", "Canva", "Capcut", "Midjourney"];
 
 const skillsList = document.getElementById("skillList");
 skills.forEach(skill => {
@@ -81,7 +67,7 @@ skills.forEach(skill => {
     skillsList.appendChild(li);
 });
 
-// Toggle Dark Mode
+// Toggle Dark Mode and Light Mode
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
@@ -142,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dots[slideIndex-1].className += " active";
     }
 
-    // Attach event listeners to the navigation buttons and dots
+    // Event listeners to the navigation buttons and dots
     document.querySelector('.prev').addEventListener('click', function() {
         plusSlides(-1);
     });

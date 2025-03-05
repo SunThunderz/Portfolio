@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,10 +8,10 @@ body {
     color: #333;
 }
 
+/* Header Styles */
 header {
     background-color: #a68eff;
     color: #fff;
-
     padding: 20px;
     text-align: center;
 }
@@ -19,6 +20,7 @@ header h1 {
     margin: 0;
 }
 
+/* Profile Picture Styles */
 #profile-pic {
     width: 150px;
     height: 150px;
@@ -30,6 +32,7 @@ header h1 {
     margin-right: 20px;
 }
 
+/* Theme Toggle Button Styles */
 #themeToggle {
     padding: 10px 20px;
     background-color: #000000;
@@ -44,6 +47,7 @@ header h1 {
     background-color: #333333;
 }
 
+/* Section Styles */
 section {
     padding: 20px;
     margin: 20px;
@@ -52,10 +56,12 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading Styles */
 h2 {
     color: #7556e6;
 }
 
+/* Unordered List Styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -66,9 +72,70 @@ ul li {
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
+    font-weight: bold; /* Make project list text bold */
 }
 
-/* Slideshow container */
+ul li p {
+    font-weight: normal; /* Ensure description text is not bold */
+}
+
+/* Read More Button Styles */
+.read-more-btn {
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: #33a83c;
+    padding: 5px 30px 5px 10px; 
+    border-radius: 5px;
+    border: none;
+    position: relative;
+}
+
+.read-more-btn:hover {
+    background-color: #386e23;
+}
+
+.read-more-btn.open {
+    background-color: red;
+}
+
+.read-more-btn.open:hover {
+    background-color: darkred; 
+}
+
+.read-more-btn::after {
+    content: '\25BC';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn.open::after {
+    transform: translateY(-50%) rotate(180deg); /* Rotate arrow */
+}
+
+/* Visit Project Button Styles */
+.visitBtn {
+    display: none;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: normal; /* Ensure visit button text is not bold */
+}
+
+.visitBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Slideshow Container Styles */
 .slideshow-container {
     position: relative;
     max-width: 1920px;
@@ -81,7 +148,7 @@ ul li {
     display: none;
 }
 
-/* Next & previous buttons */
+/* Next & Previous Buttons Styles */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -97,18 +164,17 @@ ul li {
     user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* Slideshow Next Button Styles */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* The dots/bullets/indicators */
+/* Slideshow Dots/Bullets/Indicators Styles */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -124,7 +190,7 @@ ul li {
     background-color: #717171;
 }
 
-/* Fading animation */
+/* Slideshow Fading Animation Styles */
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -142,6 +208,7 @@ ul li {
     to {opacity: 1}
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -172,6 +239,7 @@ form button:hover {
     background-color: #a68eff;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px;
@@ -215,7 +283,7 @@ body.dark-mode footer {
     color: #f4f4f4;
 }
 
-/* Style for the Socials button */
+/* Social Button Styles */
 .social-button {
     display: inline-block;
     margin-top: 10px;
@@ -231,7 +299,7 @@ body.dark-mode footer {
     background-color: #005582;
 }
 
-/* Style for the About Me section */
+/* About Me Section Styles */
 #about {
     display: flex;
     flex-direction: column;
@@ -248,14 +316,15 @@ body.dark-mode footer {
     flex-wrap: wrap;
 }
 
-/* Style for the profile picture */
+/* Profile Picture Styles */
 #profile-pic {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
     margin-right: 20px;
 }
 
+/* About Text Styles */
 .about-text {
     max-width: 600px;
     text-align: left;
