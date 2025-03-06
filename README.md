@@ -58,6 +58,7 @@ This is a personal portfolio website for Mariah Carmella P. Santander, a 5th-yea
 ## Additional Features
 - **Brent Faiyaz Random Quote Generator**: A project that generates random quotes by Brent Faiyaz. The quote generator is displayed within the same page when the "Visit Project" button is clicked.
 - **Form Validation**: The contact form includes validation to ensure all fields are filled out before submission.
+- **Proficiency Percentage Indicator**: The skills section includes proficiency percentage indicators for each skill.
 
 ## Contact
 For any inquiries or feedback, please contact Mariah Carmella P. Santander through the contact form on the website or via [LinkedIn](https://www.linkedin.com/in/mariah-santander-73b6552b5/).
