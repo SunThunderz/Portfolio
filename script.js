@@ -58,12 +58,42 @@ projects.forEach(project => {
 });
 
 // Skills
-const skills = ["HTML", "CSS", "JavaScript", "C#", ".NET 8.0", "SQL Server", "Figma", "Canva", "Capcut", "Midjourney"];
+const skills = [
+    { name: "Figma", proficiency: 90 },
+    { name: "Canva", proficiency: 90 },
+    { name: "Capcut", proficiency: 90 },
+    { name: "HTML", proficiency: 80 },
+    { name: "CSS", proficiency: 70 },
+    { name: "JavaScript", proficiency: 60 },
+    { name: "Midjourney", proficiency: 50 },
+    { name: "C#", proficiency: 30 },
+    { name: ".NET 8.0", proficiency: 30 },
+    { name: "SQL Server", proficiency: 20 }
+];
 
 const skillsList = document.getElementById("skillList");
+
+function getSkillColor(proficiency) {
+    if (proficiency <= 40) {
+        return 'red';
+    } else if (proficiency <= 70) {
+        return 'yellow';
+    } else {
+        return 'green';
+    }
+}
+
 skills.forEach(skill => {
     const li = document.createElement("li");
-    li.textContent = skill;
+    const color = getSkillColor(skill.proficiency);
+    li.innerHTML = `
+        <span>${skill.name}</span>
+        <div class="skill-bar">
+            <div class="bar">
+                <div class="progress" style="width: ${skill.proficiency}%; background-color: ${color};"><span>${skill.proficiency}%</span></div>
+            </div>
+        </div>
+    `;
     skillsList.appendChild(li);
 });
 
