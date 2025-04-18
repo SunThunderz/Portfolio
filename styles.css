@@ -353,3 +353,83 @@ body.dark-mode footer {
 .social-button:hover {
     background-color: #005582;
 }
+
+/* Contact Page Button */
+.contact-page-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contact-page-button:hover {
+    background-color: #005582;
+}
+
+/* Back Button in Header */
+header .back-button {
+    font-size: 13px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 10px;
+    background-color: #0077b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+header .back-button:hover {
+    background-color: #005582;
+}
+
+/* Login Page Styles */
+#login {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#login input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login button {
+    padding: 10px;
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#login button:hover {
+    background-color: #005582;
+}

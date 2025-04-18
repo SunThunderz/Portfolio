@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <a href="index.html" class="back-button">
+        &#8617; Go Back to My Portfolio
+    </a>
+    <h1><strong>Welcome to My Portfolio</strong></h1>
+    <div class="header-buttons">
+        <button id="themeToggle"><strong>Toggle Dark Mode</strong></button>
+    </div>
+</header>
+
+<section id="contact">
+    <h2><strong>Contact Me</strong></h2>
+    <p id="contactMessage">
+        <strong>Let’s Connect!</strong><br>
+        Have a question, collaboration idea, or just want to say hi? I’d love to hear from you!<br>
+        Fill out the form below or reach out via email: <a href="mailto:mariahsantander.plm@gmail.com">mariahsantander.plm@gmail.com</a>.<br>
+        I’ll get back to you as soon as possible.<br>
+        Looking forward to connecting with you!
+    </p>
+    <form id="contactForm" action="send_message.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <p id="formMessage" style="color: green; font-weight: bold;"></p>
+</section>
+
+<footer>
+    <p>&copy; Mariah Santander's Portfolio | <span id="currentDate"></span></p>
+</footer>
+
+<script src="contact.js"></script>
+</body>
+</html>

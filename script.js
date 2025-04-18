@@ -79,26 +79,6 @@ themeToggle.addEventListener("click", () => {
     themeToggle.style.fontWeight = "bold";
 });
 
-// Contact Form Validation
-const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
-contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    if (name && email && message) {
-        formMessage.textContent = "Thank you for your message!";
-        formMessage.style.color = "green";
-        contactForm.reset();
-    } else {
-        formMessage.textContent = "Please fill out all fields.";
-        formMessage.style.color = "red";
-    }
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     // Slideshow functionality
     var slideIndex = 1;
