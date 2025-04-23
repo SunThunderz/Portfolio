@@ -1,11 +1,4 @@
 <?php
-session_start();
-
-// Check if the admin is logged in
-if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    header("Location: login.php");
-    exit();
-}
 $conn = new mysqli("localhost", "root", "", "portfolio_db");
 $id = $_GET['id'];
 $data = $conn->query("SELECT * FROM messages WHERE id=$id")->fetch_assoc();
