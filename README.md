@@ -10,6 +10,14 @@ This is a personal portfolio website for Mariah Carmella P. Santander, a 5th-yea
 - **Dark Mode Toggle**: Switches between light and dark themes.
 - **Dynamic Date**: Displays the current date in the footer.
 - **Projects Gallery**: A slideshow showcasing the projects created.
+- **Admin Panel**: 
+  - **View Messages**: Admins can view all messages submitted through the contact form.
+  - **Edit Messages**: Admins can edit submitted messages.
+  - **Delete Messages**: Admins can delete messages.
+  - **Admin Authentication**: Secure login system for admin access.
+- **Brent Faiyaz Random Quote Generator**: A project that generates random quotes by Brent Faiyaz. The quote generator is displayed within the same page when the "Visit Project" button is clicked.
+- **Form Validation**: The contact form includes validation to ensure all fields are filled out before submission.
+- **Proficiency Percentage Indicator**: The skills section includes proficiency percentage indicators for each skill.
 
 ## Instructions to Run the Project
 
@@ -48,17 +56,37 @@ This is a personal portfolio website for Mariah Carmella P. Santander, a 5th-yea
     cd Portfolio
     ```
 
-3. **Open the  File**:
-    - Open the  file in your preferred web browser to view the portfolio website.
-    - You can do this by double-clicking the  file in your file explorer or by running the following command in the terminal:
+3. **Open the File**:
+    - Open the file in your preferred web browser to view the portfolio website.
+    - You can do this by double-clicking the file in your file explorer or by running the following command in the terminal:
     ```bash
     start index.html
     ```
 
-## Additional Features
-- **Brent Faiyaz Random Quote Generator**: A project that generates random quotes by Brent Faiyaz. The quote generator is displayed within the same page when the "Visit Project" button is clicked.
-- **Form Validation**: The contact form includes validation to ensure all fields are filled out before submission.
-- **Proficiency Percentage Indicator**: The skills section includes proficiency percentage indicators for each skill.
+### Accessing the Database
+
+1. **Open XAMPP**:
+    - Launch the XAMPP Control Panel on your computer.
+
+2. **Start Apache and MySQL**:
+    - In the XAMPP Control Panel, click **Start** for both Apache and MySQL.
+
+3. **Access phpMyAdmin**:
+    - Click the **Admin** button next to MySQL in the XAMPP Control Panel. This will open phpMyAdmin in your default web browser.
+
+4. **View the Database**:
+    - In phpMyAdmin, locate the `portfolio_db` database to view and manage the data.
+
+### Accessing the Website Locally
+
+1. **Start the Local Server**:
+    - Ensure Apache and MySQL are running in the XAMPP Control Panel.
+
+2. **Open the Website**:
+    - Open your web browser and type the following in the address bar:
+    ```
+    localhost/portfolio
+    ```
 
 ## Contact
 For any inquiries or feedback, please contact Mariah Carmella P. Santander through the contact form on the website or via [LinkedIn](https://www.linkedin.com/in/mariah-santander-73b6552b5/).

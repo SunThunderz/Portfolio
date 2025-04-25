@@ -16,6 +16,28 @@ header {
     text-align: center;
 }
 
+.admin-login-btn {
+    margin-left: 10px;
+    text-decoration: none;
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.admin-login-btn:hover {
+    background-color: #222;
+}
+
+.admin-login-btn:active {
+    background-color: #555;
+}
+
 header h1 {
     margin: 0;
 }
